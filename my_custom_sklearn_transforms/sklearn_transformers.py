@@ -14,7 +14,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
 
-FillNaNColumns(BaseEstimator, TransformerMixin):
+class FillNaNColumns(BaseEstimator, TransformerMixin):
     def __init__(self, columns, fill=0):
         self.columns = columns
         self.fill = fill
